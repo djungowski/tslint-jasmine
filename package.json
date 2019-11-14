@@ -1,6 +1,6 @@
 {
   "name": "tslint-jasmine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set of TSLint checkers for jasmine",
   "main": "tslint.json",
   "scripts": {
@@ -23,7 +23,10 @@
     "integration",
     "focus",
     "fdescribe",
-    "fit"
+    "fit",
+    "xdescribe",
+    "xit",
+    "pending"
   ],
   "author": "Dominik Ehrenberg",
   "license": "ISC",
