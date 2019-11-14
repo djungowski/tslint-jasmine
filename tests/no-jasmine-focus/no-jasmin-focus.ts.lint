@@ -1,0 +1,68 @@
+/////////////////////
+// fdescribe tests //
+/////////////////////
+
+fdescribe()
+~~~~~~~~~                                               [fdescribe not allowed]
+
+fdescribe(() => {})
+~~~~~~~~~                                               [fdescribe not allowed]
+
+fdescribe(function() {})
+~~~~~~~~~                                               [fdescribe not allowed]
+
+fdescribe(() => {
+~~~~~~~~~                                               [fdescribe not allowed]
+  it('is a test case', () => {
+    expect(true).toBe(true);
+  })
+})
+
+fdescribe(function() {
+~~~~~~~~~                                               [fdescribe not allowed]
+  it('is a test case', function() {
+    expect(true).toBe(true);
+  })
+})
+
+///////////////
+// fit tests //
+///////////////
+
+fit()
+~~~                                                     [fit not allowed]
+
+fit(() => {})
+~~~                                                     [fit not allowed]
+
+fit(function() {})
+~~~                                                     [fit not allowed]
+
+fit(() => {
+~~~                                                     [fit not allowed]
+  expect(true).toBe(true);
+})
+
+fit(function() {
+~~~                                                     [fit not allowed]
+  expect(true).toBe(true);
+})
+
+///////////////////////////
+// fdescribe + fit tests //
+///////////////////////////
+
+fdescribe(function() {
+~~~~~~~~~                                               [fdescribe not allowed]
+  fit('is a test case', function() {
+  ~~~                                                   [fit not allowed]
+    expect(true).toBe(true);
+  })
+})
+
+describe(function() {
+  fit('is a test case', function() {
+  ~~~                                                   [fit not allowed]
+    expect(true).toBe(true);
+  })
+})

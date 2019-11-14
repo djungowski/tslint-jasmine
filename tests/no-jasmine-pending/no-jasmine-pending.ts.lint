@@ -1,0 +1,53 @@
+pending()
+~~~~~~~                                                 [pending not allowed]
+
+pending('Reason why the test is pending')
+~~~~~~~                                                 [pending not allowed]
+
+it('is a pending test', () => {
+  pending()
+  ~~~~~~~                                               [pending not allowed]
+})
+
+it('is a pending test', () => {
+  pending('Reason why the test is pending')
+  ~~~~~~~                                               [pending not allowed]
+})
+
+it('is a pending test', function() {
+  pending()
+  ~~~~~~~                                               [pending not allowed]
+})
+
+it('is a pending test', function() {
+  pending('Reason why the test is pending')
+  ~~~~~~~                                               [pending not allowed]
+})
+
+describe('Some suite', () => {
+  it('is a pending test', () => {
+    pending()
+    ~~~~~~~                                             [pending not allowed]
+  })
+})
+
+describe('Some suite', () => {
+  it('is a pending test', () => {
+    pending('Reason why the test is pending')
+    ~~~~~~~                                             [pending not allowed]
+  })
+})
+
+describe('Some suite', function() {
+  it('is a pending test', function() {
+    pending()
+    ~~~~~~~                                             [pending not allowed]
+  })
+})
+
+describe('Some suite', function() {
+  it('is a pending test', function() {
+    pending('Reason why the test is pending')
+    ~~~~~~~                                             [pending not allowed]
+  })
+})
