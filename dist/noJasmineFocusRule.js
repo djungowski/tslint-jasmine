@@ -14,35 +14,20 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Lint = require("tslint");
+var JasmineRule_1 = require("./JasmineRule");
 var Rule = (function (_super) {
     __extends(Rule, _super);
     function Rule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Rule.prototype.apply = function (sourceFile) {
-        return this.applyWithWalker(new JasmineWalker(sourceFile, this.getOptions()));
+        var disallowedFunctionNames = [
+            'fdescribe',
+            'fit'
+        ];
+        return this.applyWithWalker(new JasmineRule_1.JasmineRuleWalker(sourceFile, this.getOptions(), disallowedFunctionNames));
     };
     return Rule;
 }(Lint.Rules.AbstractRule));
 exports.Rule = Rule;
-var JasmineWalker = (function (_super) {
-    __extends(JasmineWalker, _super);
-    function JasmineWalker(sourceFile, options) {
-        var _this = _super.call(this, sourceFile, options) || this;
-        _this.disallowedFunctionNames = [
-            'fdescribe',
-            'fit'
-        ];
-        return _this;
-    }
-    JasmineWalker.prototype.visitIdentifier = function (node) {
-        if (this.isFunctionNameDisallowed(node.text)) {
-            this.addFailure(this.createFailure(node.getStart(), node.getWidth(), node.text + " not allowed"));
-        }
-    };
-    JasmineWalker.prototype.isFunctionNameDisallowed = function (functionName) {
-        return this.disallowedFunctionNames.indexOf(functionName) !== -1;
-    };
-    return JasmineWalker;
-}(Lint.RuleWalker));
 //# sourceMappingURL=noJasmineFocusRule.js.map

@@ -2,6 +2,7 @@
   "extends": ["tslint:all"],
   "rulesDirectory": ["dist"],
   "rules": {
-    "no-jasmine-focus": true
+    "no-jasmine-focus": true,
+    "no-jasmine-exclude": true
   }
 }
