@@ -5,7 +5,8 @@
   "main": "tslint.json",
   "scripts": {
     "test": "jasmine",
-    "build": "tsc"
+    "build": "./bin/build.sh",
+    "prepublishOnly": "node -e \"throw 'You should not publish package from root directory. Publish from dist/ instead'\""
   },
   "repository": {
     "type": "git",
