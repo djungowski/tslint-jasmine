@@ -1,0 +1,7 @@
+{
+  "extends": ["tslint:all"],
+  "rulesDirectory": ["dist"],
+  "rules": {
+    "no-jasmine-focus": true
+  }
+}

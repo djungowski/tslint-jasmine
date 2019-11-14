@@ -1,0 +1,39 @@
+{
+  "name": "tslint-jasmine",
+  "version": "1.0.0",
+  "description": "Set of TSLint checkers for jasmine",
+  "main": "tslint.json",
+  "scripts": {
+    "test": "jasmine",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djungowski/tslint-jasmine.git"
+  },
+  "keywords": [
+    "jasmine",
+    "tslint",
+    "lint",
+    "testing",
+    "test",
+    "unittest",
+    "unit",
+    "integration",
+    "focus",
+    "fdescribe",
+    "fit"
+  ],
+  "author": "Dominik Ehrenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djungowski/tslint-jasmine/issues"
+  },
+  "homepage": "https://github.com/djungowski/tslint-jasmine#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.7",
+    "jasmine": "^3.5.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2"
+  }
+}
