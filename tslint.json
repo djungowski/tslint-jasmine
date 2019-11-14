@@ -3,6 +3,7 @@
   "rulesDirectory": ["dist"],
   "rules": {
     "no-jasmine-focus": true,
-    "no-jasmine-exclude": true
+    "no-jasmine-exclude": true,
+    "no-jasmine-pending": true
   }
 }
