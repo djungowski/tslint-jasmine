@@ -1,0 +1,68 @@
+/////////////////////
+// xdescribe tests //
+/////////////////////
+
+xdescribe()
+~~~~~~~~~                                               [xdescribe not allowed]
+
+xdescribe(() => {})
+~~~~~~~~~                                               [xdescribe not allowed]
+
+xdescribe(function() {})
+~~~~~~~~~                                               [xdescribe not allowed]
+
+xdescribe(() => {
+~~~~~~~~~                                               [xdescribe not allowed]
+  it('is a test case', () => {
+    expect(true).toBe(true);
+  })
+})
+
+xdescribe(function() {
+~~~~~~~~~                                               [xdescribe not allowed]
+  it('is a test case', function() {
+    expect(true).toBe(true);
+  })
+})
+
+///////////////
+// xit tests //
+///////////////
+
+xit()
+~~~                                                     [xit not allowed]
+
+xit(() => {})
+~~~                                                     [xit not allowed]
+
+xit(function() {})
+~~~                                                     [xit not allowed]
+
+xit(() => {
+~~~                                                     [xit not allowed]
+  expect(true).toBe(true);
+})
+
+xit(function() {
+~~~                                                     [xit not allowed]
+  expect(true).toBe(true);
+})
+
+///////////////////////////
+// xdescribe + xit tests //
+///////////////////////////
+
+xdescribe(function() {
+~~~~~~~~~                                               [xdescribe not allowed]
+  xit('is a test case', function() {
+  ~~~                                                   [xit not allowed]
+    expect(true).toBe(true);
+  })
+})
+
+describe(function() {
+  xit('is a test case', function() {
+  ~~~                                                   [xit not allowed]
+    expect(true).toBe(true);
+  })
+})

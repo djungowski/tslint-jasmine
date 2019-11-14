@@ -4,7 +4,7 @@
   "description": "Set of TSLint checkers for jasmine",
   "main": "tslint.json",
   "scripts": {
-    "test": "jasmine",
+    "test": "tslint -r dist --test \"tests/**\"",
     "build": "./bin/build.sh",
     "prepublishOnly": "node -e \"throw 'You should not publish package from root directory. Publish from dist/ instead'\""
   },
@@ -32,8 +32,9 @@
   },
   "homepage": "https://github.com/djungowski/tslint-jasmine#readme",
   "devDependencies": {
+    "@types/jasmine": "^3.4.6",
     "@types/node": "^12.12.7",
-    "jasmine": "^3.5.0",
+    "ts-node": "^8.5.0",
     "tslint": "^5.20.1",
     "typescript": "^3.7.2"
   }
