@@ -2,6 +2,10 @@
 
 A set of [TSLint](https://github.com/palantir/tslint) rules for jasmine
 
+## Note
+TSLint will be discontinued in 2020 - the "official" replacement is ESLint. If you want
+Jasmine Lint Checks in ESLint, check out [eslint-plugin-jasmine](https://github.com/tlvince/eslint-plugin-jasmine)
+
 ## Installation
 
 ```bash
