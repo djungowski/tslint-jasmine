@@ -2,6 +2,9 @@
   "extends": ["tslint:all"],
   "rulesDirectory": ["dist"],
   "rules": {
+    "no-implicit-dependencies": false,
+    "completed-docs": false,
+    "no-parameter-properties": false,
     "no-jasmine-focus": true,
     "no-jasmine-exclude": true,
     "no-jasmine-pending": true

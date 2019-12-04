@@ -29,6 +29,8 @@ fdescribe(function() {
 // fit tests //
 ///////////////
 
+someObject.fit('this must not fail')
+
 fit()
 ~~~                                                     [fit not allowed]
 
