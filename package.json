@@ -4,6 +4,7 @@
   "description": "Set of TSLint checkers for jasmine",
   "main": "tslint.json",
   "scripts": {
+    "pretest": "npm run build",
     "test": "tslint -r dist --test \"tests/**\"",
     "build": "./bin/build.sh",
     "prepublishOnly": "node -e \"throw 'You should not publish package from root directory. Publish from dist/ instead'\""
