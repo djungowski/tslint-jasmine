@@ -49,6 +49,14 @@ In case you want to use all the rules, you can simply extend the ruleset, instea
 
 ## Changelog
 
+## 1.0.2
+
+- Bugfix: rules should only check jasmine functions (#1)
+
+### 1.0.1
+
+- Readme fixes
+
 ### 1.0
 
 - Initial release with `no-jasmine-focus`, `no-jasmine-exclude` and `no-jasmine-pending` rules and `all` ruleset
